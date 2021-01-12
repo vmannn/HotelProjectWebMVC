@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+      <head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+    <h1 align="center">My Contact List</h1>
+    <br/>
+    <table border="1" cellpadding="10">
+        <thead>
+            <tr>
+            	<th>Id</th>
+                <th>Room #</th>
+                <th>Bed type</th>
+                <th>Room Rate</th>
+                <th>Occupant Name</th>
+                <th>Smoking (n/s)</th>
+                <th>Occupied</th>
+            </tr>
+        </thead>
+        <tbody>
+        	<tr th:each="room:${rooms}">
+        	<td th:text="${room.roomNum}"> Room #</td>
+        	<td th:text="${room.bedType}">Bed Type</td>
+        	<td th:text="${room.rate}">Rate</td>
+        	<td th:text="${room.occupantName}">Occupant Name</td>
+        	<td th:text="${room.smoking}"> Smoking</td>
+        	<td th:text="${room.occupied}"> Occupied</td>
+        	<td><a th:href="@{/edit/{id}(id=${room.id})}">Edit</a></td>
+        	
+        	<td><a th:href="@{/delete/{id}(id=${room.id})}">Delete</a></td>
+        	
+        </tr>
+        </tbody>
+        </table>
+
+</body>
+</html>
