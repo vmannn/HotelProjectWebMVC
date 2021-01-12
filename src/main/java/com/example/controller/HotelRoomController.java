@@ -24,7 +24,7 @@ public class HotelRoomController {
 	@RequestMapping
 	public String homePage() {
 		
-		return "home";
+		return "index";
 		
 	}
 	
