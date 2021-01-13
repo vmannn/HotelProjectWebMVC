@@ -21,7 +21,7 @@ public class HotelRoomController {
 	@Autowired
 	HotelService hotelService;
 	
-	@RequestMapping("/")
+	@GetMapping("/")
 	public String homePage() {
 		
 		return "index";
