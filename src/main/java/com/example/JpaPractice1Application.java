@@ -1,11 +1,12 @@
 package com.example;
 
 import org.springframework.boot.SpringApplication;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
-
+@ComponentScan(basePackages={"com.example.controller"})
 
 @SpringBootApplication
 public class JpaPractice1Application extends SpringBootServletInitializer{
